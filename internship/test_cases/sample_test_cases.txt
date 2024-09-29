@@ -1,0 +1,9 @@
+Test Case 1:
+- Add cache levels: L1 (size 3, LRU), L2 (size 2, LFU).
+- Insert data: "a" -> "apple", "b" -> "banana", "c" -> "cherry".
+- Retrieve "a" and observe that it moves to the top of L1.
+- Insert "d" -> "date", observe that LRU is applied at L1.
+
+Expected Output:
+Cache Level 1: a -> apple, d -> date, c -> cherry
+Cache Level 2: b -> banana
